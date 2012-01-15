@@ -8,8 +8,8 @@ object Frame {
 
 }
 
-trait Frame {
-  
+abstract class Frame(val firstPlay: Int, val secondPlay: Int) {
+
   def points: Int;
 
 }

@@ -15,7 +15,7 @@ class GameTest extends WordSpec
       game.score should equal (0)
     }
 
-    "have score 4 if theres only one 5 pin open frame" in {
+    "have score 5 if theres only one 5 pin open frame" in {
       val frames = Frame(2, 3) +: (1 to 10 map { _ => Frame(0, 0) })
 
       val game = new Game(frames)

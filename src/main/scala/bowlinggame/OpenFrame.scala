@@ -1,7 +1,8 @@
 package bowlinggame
 
-class OpenFrame(plays: Tuple2[Int, Int]) extends Frame {
+class OpenFrame(firstPlay: Int, secondPlay: Int) 
+    extends Frame(firstPlay, secondPlay) {
   
-  def points = plays._1 + plays._2
+  def points = firstPlay + secondPlay
 
 }

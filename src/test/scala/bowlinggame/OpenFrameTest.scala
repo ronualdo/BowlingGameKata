@@ -11,7 +11,7 @@ class OpenFrameTest extends WordSpec
       val firstPlay = 3
       val secondPlay = 4
 
-      val frame = new OpenFrame( (firstPlay, secondPlay) )
+      val frame = new OpenFrame( firstPlay, secondPlay )
 
       frame.points should equal ( firstPlay+secondPlay )
     }

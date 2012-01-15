@@ -8,7 +8,7 @@ class GameTest extends WordSpec
 
   "A game" should {
     "have score 0 if no pins are knocked down" in {
-      val frames = 1 to 12 map { _ => new Frame((0, 0)) }  
+      val frames = 1 to 12 map { _ => Frame(0, 0) }  
 
       val game = new Game(frames)
 
@@ -16,7 +16,7 @@ class GameTest extends WordSpec
     }
 
     "have score 4 if theres only one 5 pin open frame" in {
-      val frames = new Frame(2, 3) +: (1 to 10 map { _ => new Frame((0, 0))})
+      val frames = Frame(2, 3) +: (1 to 10 map { _ => Frame(0, 0) })
 
       val game = new Game(frames)
 

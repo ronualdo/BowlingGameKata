@@ -12,5 +12,11 @@ class StrikeFrameTest extends WordSpec
 
       strike.points should equal (15)
     }
+
+    "return 10 when theres not a next frame" in {
+      val strike = new StrikeFrame()
+
+      strike.points should equal (10)
+    }
   }
 }

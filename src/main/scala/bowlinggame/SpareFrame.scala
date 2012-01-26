@@ -1,6 +1,13 @@
 package bowlinggame
 
-class SpareFrame(firstPlay: Int, secondPlay: Int, nextFrame: Frame) {
+class SpareFrame(firstPlay: Int, secondPlay: Int, nextFrame: Frame=null) 
+    extends Frame(firstPlay, secondPlay) {
   
-  def points = 10 + nextFrame.firstPlay
+  def points = {
+    val nextPlayPoints = if (nextFrame==null) 0 else nextFrame.firstPlay
+    
+    10 + nextPlayPoints
+  }
+
+  override def toString = "("+firstPlay+","+secondPlay+")->"+nextFrame
 }

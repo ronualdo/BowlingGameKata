@@ -12,6 +12,12 @@ class SpareFrameTest extends WordSpec
 
       spare.points should equal (13)
     }
+
+    "return 10 when theres not a next play" in {
+      val spare = new SpareFrame(5, 5, null)
+
+      spare.points should equal (10)
+    }
   }
 
 }

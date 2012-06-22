@@ -17,5 +17,6 @@ object Frame {
 abstract class Frame(val firstPlay: Int, val secondPlay: Int) {
 
   def points: Int;
-
+  
+  override def toString = "(%d,%d)" format (firstPlay, secondPlay)
 }

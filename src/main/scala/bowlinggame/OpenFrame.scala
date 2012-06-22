@@ -5,5 +5,4 @@ class OpenFrame(firstPlay: Int, secondPlay: Int)
   
   def points = firstPlay + secondPlay
 
-  override def toString = "("+firstPlay+","+secondPlay+")"
 }

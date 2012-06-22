@@ -9,5 +9,4 @@ class SpareFrame(firstPlay: Int, secondPlay: Int, nextFrame: Frame=null)
     10 + nextPlayPoints
   }
 
-  override def toString = "("+firstPlay+","+secondPlay+")->"+nextFrame
 }

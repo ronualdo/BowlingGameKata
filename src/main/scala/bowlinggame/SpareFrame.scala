@@ -1,12 +1,12 @@
 package bowlinggame
 
-class SpareFrame(firstPlay: Int, secondPlay: Int, nextFrame: Frame=null) 
+class SpareFrame(firstPlay: Int, secondPlay: Int, nextFrame: Option[Frame]=None) 
     extends Frame(firstPlay, secondPlay) {
   
   def points = {
-    val nextPlayPoints = if (nextFrame==null) 0 else nextFrame.firstPlay
+    val nextPlayPoints = nextFrame.map(_.firstPlay)
     
-    10 + nextPlayPoints
+    10 + nextPlayPoints.getOrElse(0)
   }
 
 }

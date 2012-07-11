@@ -2,7 +2,7 @@ package bowlinggame
 
 object Frame {
   
-  def apply(firstPlay: Int, secondPlay: Int, nextFrame: Frame=null) = {
+  def apply(firstPlay: Int, secondPlay: Int, nextFrame: Option[Frame]=None) = {
     if (firstPlay == 10) {
       new StrikeFrame(nextFrame)
     } else if (firstPlay+secondPlay == 10) {

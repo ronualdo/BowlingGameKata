@@ -44,7 +44,7 @@ class GameTest extends WordSpec
   private def framesSeq(firstPlay: Int, secondPlay: Int, frameLength: Int) = {
     (1 to frameLength).foldRight(Seq[Frame]()) {
       (indice, frames) => {
-        val nextFrame = if (frames.isEmpty) null else frames.head
+        val nextFrame = if (frames.isEmpty) None else Some(frames.head)
         frames :+ Frame(firstPlay, secondPlay, nextFrame)
       }
     }.reverse

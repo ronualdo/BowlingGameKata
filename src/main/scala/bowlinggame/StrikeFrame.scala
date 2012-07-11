@@ -1,15 +1,13 @@
 package bowlinggame
 
-class StrikeFrame(nextFrame: Frame = null) extends Frame(10, 10) {
+class StrikeFrame(nextFrame: Option[Frame] = None) extends Frame(10, 10) {
 
   def points = {
-    val nextFramePoints = if (nextFrame == null) {
-      0
-    } else {
-      nextFrame.firstPlay + nextFrame.secondPlay
+    val nextFramePoints = nextFrame.map{ 
+      frame => frame.firstPlay + frame.secondPlay
     }
 
-    10 + nextFramePoints
+    10 + nextFramePoints.getOrElse(0)
   }
 
 }

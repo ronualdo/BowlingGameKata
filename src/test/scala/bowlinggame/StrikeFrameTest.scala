@@ -8,7 +8,8 @@ class StrikeFrameTest extends WordSpec
 
   "A StrikeFrame" should {
     "return 15 when followed by a 5 pins open frame" in {
-      val strike = new StrikeFrame(nextFrame=Frame(2, 3))
+      val nextFrame = Some(Frame(2, 3))
+      val strike = new StrikeFrame(nextFrame)
 
       strike.points should equal (15)
     }
